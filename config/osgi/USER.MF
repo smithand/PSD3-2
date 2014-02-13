@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: UserInterface Specfication
+Bundle-SymbolicName: UserInterface
+Bundle-Version: 1.0.0
+Bundle-Activator: userActivator
+Bundle-Vendor: University of Glasgow
+Bundle-Localization: plugin
+Import-Package: uk.ac.glasgow.senotes.components.lab.repository,
+  org.osgi.framework;version="1.3.0"
+Export Package: User
