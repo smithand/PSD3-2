@@ -128,3 +128,54 @@ Given a relevant teaching session that is part of the course
 When the lecturer wants to let the student identify the slots they need to attend
 and the lecturer wants to track the teaching sessions
 then the sessions for a course will be added to the relevant parties timetables
+
+USER STORY 4:
+
+Narrative:
+To avoid creating a large number of sessions
+As a lecturer
+I want to specify that a session is a one off, or recurs weekly or fortnightly
+
+Scenario: A Lecturer will be organizing a one-off presentation by a firm wanting to talk to the student
+Given the details for the upcoming presentation
+When the lecturer organizes the session via the system
+and has the relevant information
+then they can make sure that the event only appears on the time-slot it has been organized for 
+
+USER STORY 8:
+
+Narrative:
+To successfully host a session and record it
+As an administrator
+I want to assign a room to a timetable slot
+
+Scenario: The administrator needs to keep track of a new class that has started up and it's frequency of sessions
+Given the information of where the session is going to take place
+when the room conformation is recieved
+and the session is definatley going to go ahead
+then the room should be assigned to the specficed time-table slot to record the booking of the room
+
+USER STORY 11:
+
+Narrative:
+In order to take the course
+As a student
+I want to book a timetable slot for each session of my course
+
+Scenario: A student has a new course they need to sign up for 
+Given the information required for their degree, the student will sign up for a new course
+When the student knows what course to sign up for 
+and looks at the sessions they need to sign up for
+then they can sign up for each session that is neccessary
+
+USER STORY 14:
+
+Narrative:
+In order to know when sessions happen
+As a lecturer
+I want to see the details (time, location, students, tutor) for every timetable slot in a session
+
+Scenario: A lecturer begins her teaching week and wishes to know how her/his timetable is looking for the upcoming week in order to organize other activities
+Given the timetable function in the system
+When the lecturer needs to know all her information for the upcoming week
+then the system will display all the timetable slots and their information for her.
