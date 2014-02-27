@@ -23,6 +23,7 @@
 	>
 		
 		<delete dir="bin" />
+		<delete dir="jbehave"/>
 	
 	</target>
 	
@@ -43,7 +44,13 @@
 		description="Initalises the distribution in preparation for compilation of code and documentation."
 	>
 		
-		<mkdir dir="bin"/>
+		<mkdir dir="bin" />
+
+				<copy todir="bin">
+					
+					<fileset dir="src" includes="**/*.story"/>
+					
+				</copy>
 		
 	</target>
 
@@ -175,33 +182,36 @@
 		depends="osgi.run"
 	/>
 	
-	
 	<target
-		name="test"
-		depends="build"
-	>
-		
-
-		<junit			
-			printsummary="yes"
+			name="test.init"
+			depends="compile"
+			description="Prepares the jbehave directory with view resources for the HTML view of the JBehave tests."
 		>
-			<classpath refid="project.classpath"/>
+			<mkdir dir="jbehave/view"/>
 			
-			<test
-				name="sessionDB"
+			<unzip
+				src="lib/jbehave-core-3.9-resources-3.9.zip"
+				dest="jbehave/view"
 			/>
-						
-			<test
-				name="User"
+			
+			<unzip
+				src="lib/jbehave-site-resources-3.1.1.zip"
+				dest="jbehave/view"
 			/>
-						
-
-
-		</junit>
-
-
-		
-	
-	</target>
+				
+		</target>
+	<target
+			name="test"
+			depends="test.init"
+			description="Runs jbehave tests"
+		>
+			
+			<junit>
+				
+				<test name="user.test.AddSessionStories"/>
+				<classpath refid="project.classpath"/>
+			</junit>
+					
+		</target>
 	
 </project>

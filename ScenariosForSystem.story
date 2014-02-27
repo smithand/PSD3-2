@@ -16,7 +16,7 @@ then he should be the only person able to access the correct log-in credentials 
 Security/1
 
 Narrative:
-In order to seperate functions and provide correct functionality through personas
+In order to separate functions and provide correct functionality through personas
 As a User
 I want the relevant distinction between: students, lecturers, admins and tutors
 
@@ -26,18 +26,18 @@ When the user logs in
 and he checks what functionality he has
 then he should only be able to access information and functions that suit his user persona without being able to make dangerous changes
 
-Interprobability/0
+Interoperability/0
 
 Narrative:
 In order to create abstract bundles for the system
 As a developer
-I want to seperate each piece in the system into one or more OSGi bundles
+I want to separate each piece in the system into one or more OSGi bundles
 
 Scenario: A developer creates wants to re-use code he has created in a similar system they are creating
 Given the already developed system
 When the developer looks at it
 and he pulls the OSGi bundles
-then he should be able to adapt the code with minimum dependancies for the new system he is creating
+then he should be able to adapt the code with minimum dependencies for the new system he is creating
 
 Performance/0
 
@@ -70,7 +70,7 @@ Performance/2
 Narrative:
 In order to create a system which allows for entire university use
 as an admin
-I shall accomodate for at least 1000 different users
+I shall accommodate for at least 1000 different users
 
 Scenario: A student has joined the university system and it brings the total past 999 users
 Given the new student who is joining the system
@@ -84,11 +84,11 @@ In order to support enough time table slots for the year
 as a lecturer
 I want to be able to create 20 or more timetable slots for a single session
 
-Scenario: A lecturer wishes to intitiate all the sessions for their class at the start of the year without having to do it over time
+Scenario: A lecturer wishes to initiate all the sessions for their class at the start of the year without having to do it over time
 Given the time for the session
 when the lecturer wants to add 21 instances of the session
 and they want to do it at the same time
-then the system shall allow them to create the 21 sessions neccessary.
+then the system shall allow them to create the 21 sessions necessary.
 
 Performance /4
 
@@ -151,9 +151,9 @@ I want to assign a room to a timetable slot
 
 Scenario: The administrator needs to keep track of a new class that has started up and it's frequency of sessions
 Given the information of where the session is going to take place
-when the room conformation is recieved
-and the session is definatley going to go ahead
-then the room should be assigned to the specficed time-table slot to record the booking of the room
+when the room confirmation is received
+and the session is definitely going to go ahead
+then the room should be assigned to the specified time-table slot to record the booking of the room
 
 USER STORY 11:
 
@@ -166,7 +166,7 @@ Scenario: A student has a new course they need to sign up for
 Given the information required for their degree, the student will sign up for a new course
 When the student knows what course to sign up for 
 and looks at the sessions they need to sign up for
-then they can sign up for each session that is neccessary
+then they can sign up for each session that is necessary
 
 USER STORY 14:
 
@@ -175,7 +175,7 @@ In order to know when sessions happen
 As a lecturer
 I want to see the details (time, location, students, tutor) for every timetable slot in a session
 
-Scenario: A lecturer begins her teaching week and wishes to know how her/his timetable is looking for the upcoming week in order to organize other activities
+Scenario: A lecturer begins her teaching week and wishes to know how her/his timetable is looking for the upcoming week in order to organise other activities
 Given the timetable function in the system
 When the lecturer needs to know all her information for the upcoming week
 then the system will display all the timetable slots and their information for her.

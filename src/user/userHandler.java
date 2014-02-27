@@ -21,11 +21,12 @@ public class userHandler implements student, admin, lecturer {
 		
 	}
 
-	@Override
+	
 	public void lectureView() {
 		// TODO Auto-generated method stub
 		
 	}
+	
 
 	@Override
 	public void importCourse() {
@@ -33,9 +34,7 @@ public class userHandler implements student, admin, lecturer {
 		
 	}
 
-	@Override
-	public void addSession() {
-		// TODO Auto-generated method stub
+	public static void addSession(Session session) {
 		
 	}
 
@@ -53,6 +52,12 @@ public class userHandler implements student, admin, lecturer {
 
 	@Override
 	public void checkCompulsory() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addSession() {
 		// TODO Auto-generated method stub
 		
 	}
