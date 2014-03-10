@@ -12,25 +12,20 @@ import org.jbehave.core.annotations.When;
 public class AddSessionSteps {
 	private Session testSession;
 	
-	@Given("a relevant teaching session that is part of the course")
+	@Given("a relevant teaching session")
 	public void aSession(){
 		this.testSession = new Session();		
 	}
 	
-	@When("the lecturer wants to let the student identify the slots they need to attend")
-	public void sessionIsSelected(Session sessionName){
+	@When("lecturer wants to let the student identify the slots they need to attend")
+	public void sessionIsSelected(String sessionName){
 		
-		testSession = user.Session.setSession(sessionName);
+		testSession = user.Session.setSession(testSession);
 	}
 	
-	@When("the lecturer wants to track the teaching sessions")
-	public void sessionTrack(Session tracking){
-		
-		testSession = user.Session.setSession(tracking);
-	}
 	
 
-	@Then("the sessions for a course will be identified")
+	@Then("sessions for a course will be added to the relevant parties timetables when seen")
 	public void sessionAddition(Session expected){
 		
 		user.userHandler.addSession(testSession);
