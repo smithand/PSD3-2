@@ -35,8 +35,9 @@ public class sessionDbHandler implements sessionDbInterface {
             }
 
 	@Override
-	public void addSession() {
-		// TODO Auto-generated method stub
+	public void addSession(String time, String room, String name) {
+		ArrayList<String> sessions = timetableContents();
+		sessions.add(time + "," + room  + "," + name);
 
 	}
 
