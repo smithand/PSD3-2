@@ -5,5 +5,5 @@ import java.util.ArrayList;
 public interface sessionDbInterface {
     public ArrayList<String> lectureView();
     public void assignRoom(String roomID, String sessionID);
-    public void addSession();
+    public void addSession(String time, String room, String name);
 }
